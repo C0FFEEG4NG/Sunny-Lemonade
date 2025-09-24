@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Lemonade - Freshly Squeezed Happiness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for elements fading in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-amber-500">Sunny Lemonade</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-amber-500 transition duration-300">About</a>
+                <a href="#products" class="text-gray-600 hover:text-amber-500 transition duration-300">Products</a>
+                <a href="#team" class="text-gray-600 hover:text-amber-500 transition duration-300">Team</a>
+                <a href="#contact" class="text-gray-600 hover:text-amber-500 transition duration-300">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block bg-amber-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-600 transition duration-300 shadow">Get in Touch</a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block text-gray-600 hover:text-amber-500 transition duration-300">About</a>
+            <a href="#products" class="block text-gray-600 hover:text-amber-500 transition duration-300">Products</a>
+            <a href="#team" class="block text-gray-600 hover:text-amber-500 transition duration-300">Team</a>
+            <a href="#contact" class="block text-gray-600 hover:text-amber-500 transition duration-300">Contact</a>
+            <a href="#contact" class="block mt-2 bg-amber-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-amber-600 transition duration-300 shadow text-center">Get in Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">Freshly Squeezed Happiness, Delivered Daily.</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">We craft delicious, all-natural lemonade made from the sunniest lemons and a whole lot of love.</p>
+                <a href="#products" class="bg-amber-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg transform hover:scale-105">See Our Lemonades</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Story</h2>
+                    <p class="text-amber-500 font-semibold mt-1">From Our Grove to Your Glass</p>
+                </div>
+                <div class="max-w-4xl mx-auto text-center text-gray-600 text-lg leading-relaxed fade-in">
+                    <p>Sunny Lemonade started from a simple family recipe and a passion for creating moments of joy. We believe that the best things in life are simple, natural, and shared with others. Our mission is to serve up the most refreshing and delightful lemonade you've ever tasted.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Delicious Products</h2>
+                    <p class="text-amber-500 font-semibold mt-1">Taste the Sunshine</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Product 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in">
+                        <div class="bg-amber-100 text-amber-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Classic Sunshine Lemonade</h3>
+                        <p class="text-gray-600">The original recipe that started it all. Perfectly sweet, perfectly tart, and perfectly refreshing.</p>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in" style="transition-delay: 150ms;">
+                        <div class="bg-amber-100 text-amber-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Strawberry Bliss Lemonade</h3>
+                        <p class="text-gray-600">A sweet twist on our classic, made with fresh, muddled strawberries for a burst of summer flavor.</p>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in" style="transition-delay: 300ms;">
+                        <div class="bg-amber-100 text-amber-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cool Mint Lemonade</h3>
+                        <p class="text-gray-600">A uniquely invigorating blend of our classic lemonade with a hint of cool, fresh mint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet the Zest Team</h2>
+                    <p class="text-amber-500 font-semibold mt-1">The Squeeze Squad</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Team Member 1 -->
+                    <div class="text-center fade-in">
+                        <img src="https://placehold.co/400x400/f59e0b/ffffff?text=JD" alt="Jane Doe" class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg">
+                        <h4 class="text-lg font-bold text-gray-900">Jane Doe</h4>
+                        <p class="text-gray-500">Chief Executive Officer</p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="text-center fade-in" style="transition-delay: 150ms;">
+                        <img src="https://placehold.co/400x400/fbbf24/ffffff?text=JS" alt="John Smith" class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg">
+                        <h4 class="text-lg font-bold text-gray-900">John Smith</h4>
+                        <p class="text-gray-500">Head of Operations</p>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="text-center fade-in" style="transition-delay: 300ms;">
+                        <img src="https://placehold.co/400x400/fcd34d/ffffff?text=EM" alt="Emily Marx" class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg">
+                        <h4 class="text-lg font-bold text-gray-900">Emily Marx</h4>
+                        <p class="text-gray-500">Lead Flavorist</p>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="text-center fade-in" style="transition-delay: 450ms;">
+                        <img src="https://placehold.co/400x400/fde68a/ffffff?text=CW" alt="Chris Wilson" class="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-lg">
+                        <h4 class="text-lg font-bold text-gray-900">Chris Wilson</h4>
+                        <p class="text-gray-500">Events Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get in Touch</h2>
+                    <p class="text-amber-500 font-semibold mt-1">Have a Question or a Big Order?</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-gray-50 p-8 md:p-12 rounded-xl shadow-lg fade-in">
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="jane.doe@example.com">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Tell us about your event or ask a question..."></textarea>
+                        </div>
+                        <div class="text-center mt-8">
+                            <button type="submit" class="bg-amber-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-amber-600 transition duration-300 shadow-lg transform hover:scale-105">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-center md:text-left">&copy; 2025 Sunny Lemonade. All Rights Reserved.</p>
+                <div class="flex mt-4 md:mt-0 space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                       <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.019c0 4.435 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.019C22 6.477 17.523 2 12 2z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript for scroll-in animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2, // Trigger when 20% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Adjust the bottom margin
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a, nav a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if(link.closest('#mobile-menu')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
